@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment | Page</title>
+    <link rel="stylesheet" href="{% static 'css/payment.css' %}">
+</head>
+<body>
+    
+    <div class="wrapper">
+
+        <!-- Left Panel -->
+        <div class="payment-left">
+            <div class="payment-option active" onclick="selectMethod('upi')">UPI</div>
+            <div class="payment-option" onclick="selectMethod('card')">Credit/Debit Card</div>
+            <div class="payment-option" onclick="selectMethod('netbanking')">Net Banking</div>
+            <div class="payment-option" onclick="selectMethod('cod')">Cash on Delivery</div>
+        </div>
+
+        <!-- Right Panel -->
+        <div class="payment-right">
+            <h2>Choose Payment Method</h2>
+            <p>Total: ₹{{ total_price }}</p>
+            <p>Expected Delivery: {{ expected_delivery }}</p>
+
+            <!-- UPI -->
+            <div id="upi" class="payment-method active">
+                <form method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="payment_method" value="upi">
+                    <label>Enter your UPI ID:</label><br>
+                    <input type="text" name="upi_id" required>
+                    <br><button class="pay-button" type="submit">Pay via UPI</button>
+                </form>
+            </div>
+
+            <!-- Card -->
+            <div id="card" class="payment-method">
+                <form method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="payment_method" value="card">
+                    <label>Card Number:</label><br>
+                    <input type="text" name="card_number" required><br>
+                    <label>Expiry:</label><br>
+                    <input type="text" name="expiry" required><br>
+                    <label>CVV:</label><br>
+                    <input type="password" name="cvv" required><br>
+                    <button class="pay-button" type="submit">Pay via Card</button>
+                </form>
+            </div>
+
+            <!-- Net Banking -->
+            <div id="netbanking" class="payment-method">
+                <form method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="payment_method" value="netbanking">
+                    <label>Select Bank:</label><br>
+                    <select name="bank" required>
+                    <option value="">Select</option>
+                    <option>SBI</option>
+                    <option>ICICI</option>
+                    <option>HDFC</option>
+                    </select><br>
+                    <button class="pay-button" type="submit">Pay via Net Banking</button>
+                </form>
+            </div>
+
+            <!-- COD -->
+            <div id="cod" class="payment-method">
+                <form method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="payment_method" value="cod">
+                    <p>You can pay in cash when your order is delivered.</p>
+                    <button class="pay-button" type="submit">Place Order (COD)</button>
+                </form>
+            </div>
+
+            <div class="summary">
+                <p>Secured by YourSite • 100% Safe Payment</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function selectMethod(id) {
+            // Remove active class from all options and panels
+            document.querySelectorAll('.payment-option').forEach(opt => opt.classList.remove('active'));
+            document.querySelectorAll('.payment-method').forEach(method => method.classList.remove('active'));
+
+            // Add active to selected
+            document.querySelectorAll('.payment-option').forEach(opt => {
+            if (opt.innerText.toLowerCase().includes(id)) {
+                opt.classList.add('active');
+            }
+            });
+
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+
+</body>
+</html>

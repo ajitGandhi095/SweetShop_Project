@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+<body>
+    
+    <div class="wrapper">
+
+        <!-- Header -->
+        <header class="navbar">
+            <div id="title">LaxmiSweetsStop.</div>
+            <div id="navdiv">
+                <nav class="nav-links">
+                    <span><a href="/">Home</a></span>
+                    <span style="margin-left: 1em; margin-right: 1em;"><a href="/shop">Shop</a></span>
+                    <span style="margin-right: 1em;"><a href="/about">About</a></span>
+                    <span><a href="/contact">Contact</a></span>
+                </nav>
+            </div>
+            <div id="header-login">
+                <a href="/login" class="bi bi-person" style="margin-right: 1em;"></a>
+                <a href="/cart" class="bi bi-cart" style="margin-right: 1em;"></a>
+            </div>
+        </header>
+
+        <!-- Main-Section -->
+        <main>
+
+            <!-- Section-1 -->
+            <section>
+
+                <div id="section1-title">Contact Us</div>
+                <div id="section1-subtitle">Do you have any question?</div>
+                <div id="form-div">
+                    <form>
+                        <div id="form-div1">
+                            <div class="input-wrapper">
+                                <input type="text" name="name" required>
+                                <span class="custom-placeholder">Name</span>
+                            </div>
+
+                            <div class="input-wrapper" style="margin-left: -2em;">
+                                <input type="email" name="email" required>
+                                <span class="custom-placeholder">E-mail</span>
+                            </div>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <textarea name="message" rows="4" required style="width: 553px;"></textarea>
+                            <span class="custom-placeholder">Message</span>
+                        </div>
+                        <button id="from-button">Send message</button>
+                    </form>
+                </div>
+
+            </section>
+
+            <!-- Section-2 -->
+            <section id="section2">
+
+                <div id="section2-title">Locations</div>
+                <div id="section2-location">
+                    <div>Jaleswar, Baleswar, Odisha 756034</div>
+                    <div>
+                        <img src="{% static 'images/call-img.jpg' %}" alt="">
+                        <span> +91 9652812277</span>
+                        <img src="{% static 'images/location-img.jpg' %}" alt="">
+                        <span> Directions</span>
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- Footer-Section -->
+        <footer>
+            <div class="footer-div">
+                <div class="footer-title">Contact Information</div>
+                <div class="footer-grid1">
+                    <span class="bi bi-shop footer-div1-icon"> 
+                        <span class="footer-text" id="footer-grid1-text">Jaleswae, Baleswar, Odisha, <span style="margin-left: 2em;">756030</span></span>
+                    </span>
+                </div>
+                <div class="footer-sub-grid">
+                    <span class="bi bi-telephone footer-div1-icon">
+                        <span class="footer-text">+91 9959334007</span>
+                    </span>
+                </div>
+                <div class="footer-sub-grid">
+                    <span class="bi bi-envelope footer-div1-icon">
+                        <span class="footer-text">sales@mahalaxmisweets.com</span>
+                    </span>
+                </div>
+            </div>
+
+            <div class="footer-div2">
+                <div class="footer-title">Quick Links</div>
+                <div class="footer-maingrid">
+                    <span class="footer-text">Contact Us</span>
+                </div>
+                <div class="footer-sub-grid2">
+                    <span class="footer-text">Store Locator</span>
+                </div>
+            </div>
+            
+            <div class="footer-div3">
+                <div class="footer-title">Policies</div>
+                <div class="footer-maingrid">
+                    <span class="footer-text">Payment & Shipping</span>
+                </div>
+                <div class="footer-sub-grid2">
+                    <span class="footer-text">Return & Refund</span>
+                </div>
+                <div class="footer-sub-grid2">
+                    <span class="footer-text">Privacy Policy</span>
+                </div>
+                <div class="footer-sub-grid2">
+                    <span class="footer-text">Terms & Conditions</span>
+                </div>
+            </div>
+
+            <div class="footer-div4">
+                <div class="footer-title">Follow Us</div>
+                <div class="footer-maingrid" style="margin-left: 0.1em;">
+                    <span class="bi bi-instagram footer-grid4-icon"></span>
+                    <span class="bi bi-facebook" style="margin-left: 0.8em;"></span>
+                    <span class="bi bi-youtube" style="margin-left: 0.8em;"></span>
+                    <span class="bi bi-linkedin" style="margin-left: 0.8em;"></span>
+                    <div class="bi bi-twitter-x" style="margin-top: 1em;"></div>
+                </div>
+            </div>
+
+            <div id="footer-copyright">
+            <div id="footer-hr"></div>
+            <div id="copyright">
+                <p style="color: white; margin-bottom: 0.5em; font-family: 'Arial';">Copyright © 2025 Travel Agency</p>
+            </div>
+        </div>
+        </footer>
+
+
+    </div>
+
+</body>
+</html>

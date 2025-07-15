@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Suucees | Page</title>
+    <link rel="stylesheet" href="{% static 'css/payment_success.css' %}">
+</head>
+<body>
+    
+    <div class="wrapper">
+
+        <h2>🎉 Payment Successful!</h2>
+        <p>Thank you for your order.</p>
+
+        <div class="section">
+            <h4>🧾 Payment Details</h4>
+            {% if payment %}
+                <p><strong>Transaction ID:</strong> {{ payment.transaction_id|default:"N/A" }}</p>
+                <p><strong>Status:</strong> {{ payment.payment_status }}</p>
+                <p><strong>Amount Paid:</strong> ₹{{ payment.amount }}</p>
+                <p><strong>Date:</strong> {{ payment.timestamp }}</p>
+            {% else %}
+                <p>No payment record found.</p>
+            {% endif %}
+        </div>
+
+        <div class="section">
+            <h4>🏠 Delivery Address</h4>
+            {% if address %}
+                <p>{{ address.name }} - {{ address.phone }}</p>
+                <p>{{ address.house }}, {{ address.area }}</p>
+                <p>{{ address.landmark }}</p>
+                <p>{{ address.city }}, {{ address.state }} - {{ address.pincode }}</p>
+            {% else %}
+                <p>Address not available.</p>
+            {% endif %}
+        </div>
+        <a class="btn" href="/homepage">Go to Homepage</a>
+
+    </div>
+
+</body>
+</html>

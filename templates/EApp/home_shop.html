@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Shop</title>
+    <link rel="stylesheet" href="{% static 'css/home_shop.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+<body>
+    
+    <div class="wrapper">
+
+        <!-- Header -->
+        <header class="navbar">
+            <div id="title">LaxmiSweetsStop.</div>
+            <div id="navdiv">
+                <nav class="nav-links">
+                    <span><a href="/homepage">Home</a></span>
+                    <span style="margin-left: 1em; margin-right: 1em;"><a href="/home-shop">Shop</a></span>
+                    <span style="margin-right: 1em;"><a href="/home-about">About</a></span>
+                    <span><a href="/home-contact">Contact</a></span>
+                </nav>
+            </div>
+            <div id="account">
+                <a href="/user-profile" class="bi bi-person user-profile" style="margin-right: 1em;"></a>
+                <a href="/cart" class="bi bi-cart user-profile" style="margin-right: 1.1em; text-decoration: none;"></a>
+
+                <!-- Display Cart Count -->
+                {% if cart_count > 0 %}
+                    <span id="cart-count">
+                        <span style="margin-left: 4px;">{{ cart_count }}</span>
+                    </span>
+                {% endif %}
+                <a href="/admin-login" id="dashboardbtn" style="font-size: 20px;">Dashboard</a>
+            </div>
+        </header>
+
+        <!-- Main-Section -->
+
+        <main>
+
+            <!-- Section-1 -->
+            <section id="section1">
+
+                <div id="section1-img">
+                    <img src="{% static 'images/home_image.jpg' %}" alt="" width="100%" height="400px">
+                </div>
+                <div id="section1-title">Sweets and Namkeen</div>
+
+            </section>
+
+            <!-- Section-2 -->
+            <section id="section2">
+
+                <div class="product-list">
+                    {% for product in products %}
+                        <div class="product-item">
+
+                            <div class="card-image">
+                                <img src="{{ product.image.url }}" alt="{{ product.name }}" width="280px" height="280px">
+                                {% if product.in_stock %}
+                                    <div class="product-available">Stock</div>
+                                {% else %}
+                                    <div class="product-unavailable">Out of Stock</div>
+                                {% endif %}
+                            </div>
+
+                            <div id="section2-product-name">{{ product.name }}</div>
+
+                            {% if product.in_stock %}
+                                <div id="section2-product-desc">{{ product.description }}</div>
+                            {% endif %}
+
+                            <div id="section2-product-price">&#8377; {{product.price }}</div>
+
+                            <div class="buy-now-button">
+                                <a href="#" id="buyBtn1"
+                                    {% if not product.in_stock %} class="disabled-button" onclick="return false;" {% endif %}>
+                                    Buy Now
+                                </a>
+                                <a href="/add/{{ product.id }}" id="buyBtn2"
+                                    {% if not product.in_stock %} class="disabled-button" onclick="return false;" {% endif %}>
+                                    Add to Cart</a>
+                            </div>
+
+                        </div>
+                    {% endfor %}
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer-Section -->
+        <footer>
+            <div class="footer-div">
+                <div class="footer-title">Contact Information</div>
+                <div class="footer-grid1">
+                    <span class="bi bi-shop footer-div1-icon"> 
+                        <span class="footer-text" id="footer-grid1-text">Jaleswae, Baleswar, Odisha, <span style="margin-left: 2em;">756030</span></span>
+                    </span>
+                </div>
+                <div class="footer-sub-grid">
+                    <span class="bi bi-telephone footer-div1-icon">
+                        <span class="footer-text">+91 9959334007</span>
+                    </span>
+                </div>
+                <div class="footer-sub-grid">
+                    <span class="bi bi-envelope footer-div1-icon">
+                        <span class="footer-text">sales@mahalaxmisweets.com</span>
+                    </span>
+                </div>
+            </div>
+
+            <div class="footer-div2">
+                <div class="footer-title">Quick Links</div>
+                <div class="footer-maingrid">
+                    <span class="footer-text">Contact Us</span>
+                </div>
+                <div class="footer-sub-grid2">
+                    <span class="footer-text">Store Locator</span>
+                </div>
+            </div>
+            
+            <div class="footer-div3">
+                <div class="footer-title">Policies</div>
+                <div class="footer-maingrid">
+                    <span class="footer-text">Payment & Shipping</span>
+                </div>
+                <div class="footer-sub-grid2">
+                    <span class="footer-text">Return & Refund</span>
+                </div>
+                <div class="footer-sub-grid2">
+                    <span class="footer-text">Privacy Policy</span>
+                </div>
+                <div class="footer-sub-grid2">
+                    <span class="footer-text">Terms & Conditions</span>
+                </div>
+            </div>
+
+            <div class="footer-div4">
+                <div class="footer-title">Follow Us</div>
+                <div class="footer-maingrid" style="margin-left: 0.1em;">
+                    <span class="bi bi-instagram footer-grid4-icon"></span>
+                    <span class="bi bi-facebook" style="margin-left: 0.8em;"></span>
+                    <span class="bi bi-youtube" style="margin-left: 0.8em;"></span>
+                    <span class="bi bi-linkedin" style="margin-left: 0.8em;"></span>
+                    <div class="bi bi-twitter-x" style="margin-top: 1em;"></div>
+                </div>
+            </div>
+
+            <div id="footer-copyright">
+                <div id="footer-hr"></div>
+                <div id="copyright">
+                    <p style="color: white; margin-bottom: 0.5em; font-family: 'Arial';">Copyright © 2025 Travel Agency</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+</html>

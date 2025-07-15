@@ -1,0 +1,341 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.wrapper {
+    overflow: visible;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 30px;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+#title {
+    font-size: 30px;
+}
+#navdiv {
+    margin-top: 1%;
+    margin-left: -2em;
+}
+#navdiv a{
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+    position: relative;
+}
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: rgb(255, 68, 0);  /* You can change the underline color */
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+.nav-links a:hover {
+    color: brown /* Hover text color */
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+#account {
+    margin-top: 0.4em;
+    margin-right: 2em;
+}
+#account a{
+    font-size: 27px;
+    color: black;
+}
+.user_profile{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-size: 22px;
+}
+#logout-btn {
+    text-decoration: none;
+    padding: 8px;
+    border:1px solid #d5bf94;
+    background-color: #d5bf94;
+    border-radius: 20px;
+}
+
+/* Main_Section */
+
+#section1 {
+    margin-top: 2em;
+    margin-left: 1em;
+}
+.section1-heading {
+    font-size: 40px;
+    font-family: 'Segoe UI';
+    font-weight: bold;
+    color: #88070a;
+    text-align: center;
+}
+.section1-para {
+    font-size: 22px;
+    text-shadow: 1px 1px 3px gray;
+    margin-top: 2em;
+}
+.section2-datetime {
+    margin-top: 2em;
+    font-size: 19px;
+}
+#section2 {
+    margin-top: 20px;
+    background-color: #e0e0e0;
+    padding: 10px;
+    display: flex;
+}
+#section2-div1 {
+    margin-left: 6em;
+    margin-top: 8em;
+}
+#section2-div1-heading {
+    font-size: 35px;
+    text-shadow: 1px 1px 3px gray;
+}
+#section2-div1-para {
+    margin-top: 1em;
+    font-size: 20px;
+    font-family: "Bell MT";
+    width: 400px;
+}
+#section2-div2 {
+    margin-left: 10em;
+    font-family: Arial, sans-serif;
+    background-color: #eee8e8;
+    width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.form-stock {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+#form-stock-label {
+    font-weight: bold;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    font-weight: bold;
+    color:#88070a;
+}
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Segoe UI';
+}
+.form-desc-input {
+    padding: 5px;
+    font-size: 17px;
+    font-family: 'Segoe UI';
+}
+.error-message {
+    color: red;
+    font-size: 13px;
+    margin-top: 5px;
+}
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #88070a;
+    color: #d5bf94;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 'Segoe UI';
+    margin-bottom: 1em;
+}
+.submit-btn:hover {
+    opacity: 0.8;
+}
+
+/* Section-3 */
+
+#section3 {
+    overflow: hidden;
+    background: linear-gradient(rgba(192, 88, 88, 0.2), rgba(236, 185, 56, 0.1));
+}
+table, tr, td, th {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    margin-left: 20em;
+    margin-top: 1.5em;
+    border-radius: 15px;
+}
+table {
+    border-spacing: 0;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2em;
+}
+#section3-heading {
+    margin-top: 1em;
+    text-align: center;
+    font-size: 35px;
+    text-shadow: 1px 1px 3px gray;
+}
+#table-body td{
+    padding: 8px;
+}
+#table-head th {
+    padding: 5px;
+}
+.table-body-link {
+    text-decoration: none;
+    color: black;
+    font-family: 'Arial';
+    font-size: 14px;
+    padding: 1px;
+    border: 1px solid gray;
+    border-radius: 2px;
+    background-color: #f1efef;
+}
+.table-body-link:hover {
+    background-color: #e4e1e1;
+}
+
+/* Section-4 */
+
+#section4 {
+    overflow: hidden;
+    background: linear-gradient(rgba(236, 185, 56, 0.1), rgba(192, 88, 88, 0.2));
+}
+#section4-heading {
+    margin-top: 1em;
+    text-align: center;
+    font-size: 35px;
+    text-shadow: 1px 1px 3px gray;
+}
+#section4 table, tr, th, td {
+    margin-left: 23em;
+}
+
+/* Section-5 */
+#section5 {
+    overflow: hidden;
+    background: linear-gradient(rgba(192, 88, 88, 0.2), rgba(236, 185, 56, 0.1));
+}
+#section5-heading {
+    margin-top: 1em;
+    text-align: center;
+    font-size: 35px;
+    text-shadow: 1px 1px 3px gray;
+}
+#section5 table, tr, td, th {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+/* Footer-Section */
+
+footer {
+    background-color: #88070a;
+    margin-top: 2em;
+    color: #fff;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr 3fr;
+}
+.footer-div {
+    margin-top: 1em;
+    margin-left: 1em;
+}
+.footer-div2 {
+    margin-top: 1em;
+    margin-left: 7em;
+}
+.footer-div3 {
+    margin-top: 1em;
+    margin-left: 4em;
+}
+.footer-div4 {
+    margin-top: 1em;
+    margin-left: 4em;
+}
+.footer-title {
+    font-size: 26px;
+    color: #d5bf94;
+    font-family: 'Californian FB';
+    font-weight: bold;
+}
+.footer-div1-icon {
+    color: #d5bf94;
+}
+.footer-grid1 {
+    margin-top: 1em;
+    font-size: 20px;
+}
+.footer-sub-grid {
+    margin-top: 0.7em;
+}
+.footer-maingrid {
+    margin-top: 1em;
+    font-size: 20px;
+    margin-left: -0.5em;
+}
+.footer-sub-grid2 {
+    margin-top: 0.7em;
+    margin-left: -0.5em;
+}
+
+.footer-text {
+    font-size: 18px;
+    color: #fff;
+    margin-left: 0.5em;
+    font-family: 'STXihei';
+}
+.footer-grid4-icon {
+    font-size: 22px;
+}
+#footer-hr {
+  border: 1px solid #d5bf94;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin-top: 3em;
+  width: 380%;
+  margin-left: 1em;
+}
+#footer-copyright {
+  display: flex;
+  flex-direction: column;
+}
+#copyright {
+  width: 370%;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: -15px;
+  color: #616161;
+}

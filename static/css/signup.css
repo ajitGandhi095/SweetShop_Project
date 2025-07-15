@@ -1,0 +1,209 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 30px;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 999;
+}
+#title {
+    font-size: 30px;
+}
+#navdiv {
+    margin-top: 1%;
+    margin-left: -2em;
+}
+#navdiv a{
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+    position: relative;
+}
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: rgb(255, 68, 0);  /* You can change the underline color */
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+.nav-links a:hover {
+    color: brown /* Hover text color */
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+#header-login {
+    margin-top: 0.4em;
+}
+#header-login a{
+    font-size: 27px;
+    color: black;
+}
+
+/* Signup form */
+
+#signup-body {
+    font-family: Arial, sans-serif;
+    background-color: #eee8e8;
+    width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+#form-heading {
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Perpetua';
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #88070a;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+/* .form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+} */
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 14px;
+    box-sizing: border-box;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+/* Style the placeholder */
+.form-group input::placeholder,
+.form-group select::placeholder {
+    font-size: 15px;
+    color: rgb(81, 81, 81);
+    font-family: 'Segoe UI';
+}
+.error-message {
+    color: red;
+    font-size: 13px;
+    margin-top: 5px;
+}
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #88070a;
+    color: #d5bf94;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 'Segoe UI';
+    margin-bottom: 2em;
+}
+.submit-btn:hover {
+    opacity: 0.8;
+}
+#signup-login {
+    color: rgb(58, 57, 57);
+    margin-left: 8em;
+    font-size: 17px;
+}
+
+/* Footer-Section */
+
+footer {
+    background-color: #88070a;
+    margin-top: 2em;
+    color: #fff;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr 3fr;
+}
+.footer-div {
+    margin-top: 1em;
+    margin-left: 1em;
+}
+.footer-div2 {
+    margin-top: 1em;
+    margin-left: 7em;
+}
+.footer-div3 {
+    margin-top: 1em;
+    margin-left: 4em;
+}
+.footer-div4 {
+    margin-top: 1em;
+    margin-left: 4em;
+}
+.footer-title {
+    font-size: 26px;
+    color: #d5bf94;
+    font-family: 'Californian FB';
+    font-weight: bold;
+}
+.footer-div1-icon {
+    color: #d5bf94;
+}
+.footer-grid1 {
+    margin-top: 1em;
+    font-size: 20px;
+}
+.footer-sub-grid {
+    margin-top: 0.7em;
+}
+.footer-maingrid {
+    margin-top: 1em;
+    font-size: 20px;
+    margin-left: -0.5em;
+}
+.footer-sub-grid2 {
+    margin-top: 0.7em;
+    margin-left: -0.5em;
+}
+
+.footer-text {
+    font-size: 18px;
+    color: #fff;
+    margin-left: 0.5em;
+    font-family: 'STXihei';
+}
+.footer-grid4-icon {
+    font-size: 22px;
+}
+#footer-hr {
+  border: 1px solid #d5bf94;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin-top: 3em;
+  width: 380%;
+  margin-left: 1em;
+}
+#footer-copyright {
+  display: flex;
+  flex-direction: column;
+}
+#copyright {
+  width: 370%;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: -15px;
+  color: #616161;
+}

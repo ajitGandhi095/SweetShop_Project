@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #f1f3f6;
+}
+.wrapper {
+    display: flex;
+    max-width: 1000px;
+    margin: 3em auto;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.payment-left {
+    width: 30%;
+    background: #f9fafb;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+}
+.payment-right {
+    width: 70%;
+    padding: 30px;
+}
+.payment-option {
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-left: 4px solid transparent;
+    cursor: pointer;
+    background: white;
+    transition: all 0.2s ease-in-out;
+}
+.payment-option:hover {
+    background: #eef1f5;
+}
+.payment-option.active {
+    border-left: 4px solid #2874f0;
+    background: #e7f0ff;
+}
+.payment-method {
+    display: none;
+}
+.payment-method.active {
+    display: block;
+}
+.pay-button {
+    margin-top: 20px;
+    background: #2874f0;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.pay-button:hover {
+    background: #185acb;
+}
+.summary {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #555;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}

@@ -1,0 +1,378 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper {
+    overflow: visible;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 30px;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+#title {
+    font-size: 30px;
+}
+#navdiv {
+    margin-top: 1%;
+    margin-left: -2em;
+}
+#navdiv a{
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+    position: relative;
+}
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: rgb(255, 68, 0);  /* You can change the underline color */
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+.nav-links a:hover {
+    color: brown /* Hover text color */
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+#header-login {
+    margin-top: 0.4em;
+}
+#header-login a{
+    font-size: 27px;
+    color: black;
+}
+
+/* Section-1 */
+#section1 {
+    background-color: #d5bf94;
+    height: 520px;
+    margin-bottom: 1em;
+    position: relative;
+}
+#section1-img img {
+    margin-top: 2em;
+    object-fit: cover;
+}
+#section1-text {
+    position: absolute;
+    top: 10em;
+    left: 30em;
+}
+#section1-subtext {
+    color:#fff;
+    font-size: 20px;
+    font-family: 'Segoe UI';
+}
+#section1-headtext {
+    margin-top: 0.5em;
+    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Calisto MT';
+    width: 500px;
+    margin-left: -1em;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 3px black;
+}
+
+/* Section-2 */
+
+#section2 {
+    margin-top: 4em;
+    margin-bottom: 4em;
+    display: flex;
+}
+#section2-firsttext {
+    margin-left: 9em;
+}
+.section2-num {
+    font-size: 60px;
+    font-weight: bold;
+    font-family: 'Bell MT';
+    margin-bottom: 0.1em;
+    color: #88070a;
+}
+.section2-subtext {
+    font-size: 27px;
+    font-family: 'Bell MT';
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Section-3 */
+
+#section3 {
+    display: flex;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+#section3-text {
+    background-color: #f1e1c1;
+    height: 395px;
+    text-align: center;
+}
+#section3 img {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+#section3 #section3-text{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+#section3-head-text {
+    margin-top: 1em;
+    font-size: 40px;
+    color: #88070a;
+    margin-bottom: 1em;
+}
+#section3-text p {
+    margin-left: 2em;
+    margin-right: 2em;
+    font-size: 17px;
+    font-family: 'STXihei';
+}
+
+/* Section-4 */
+
+#section4 {
+    margin-top: 4em;
+    background-color: #88070a;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    margin-bottom: 5em;
+}
+#section4-para p{
+    margin-top: 3em;
+    margin-bottom: 2em;
+    margin-left: 12em;
+    font-size: 22px;
+    font-family: 'Segoe UI';
+    color: #f1e1c1;
+    width: 750px;
+}
+#section4 img {
+    object-fit: cover;
+    border-radius: 100%;
+}
+#section4-name {
+    margin-top: 1em;
+    font-size: 25px;
+    font-family: 'Perpetua';
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+#section4-title {
+    font-size: 20px;
+    font-family: 'Segoe UI';
+    color: #ffffff;
+}
+
+/* Section-5 */
+
+#section5 {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), 
+              url('../images/sweet-img.jpg');
+    height: 750px;
+    width: 100%;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    object-fit: cover;
+}
+#section5-maindiv {
+    position: absolute;
+    top: 7em;
+    left: 7em;
+    background: linear-gradient(rgba(22, 22, 22, 0.7), rgba(33, 33, 33, 0.7));
+    padding: 4%;
+    border: 1px solid gray;
+    width: 80%;
+    height: 300px;
+    
+}
+#section5-head {
+    color: rgb(249, 209, 161);
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Bell MT';
+    letter-spacing: 1px;
+    margin-top: 2%;
+    margin-left: 3%;
+    text-align: center;
+}
+#section5-para {
+    color: rgb(184, 181, 181);
+    font-size: 17px;
+    margin-top: 1.5em;
+    margin-left: 1.6em;
+    width: 70%;
+}
+#section5-button {
+    width: 180px;
+    padding: 7px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font: 15px;
+    margin-top: 4em;
+    margin-left: 1.6em;
+}
+#section5-button-link {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Section-6 */
+
+#section6 {
+    display: flex;
+}
+#section6-left-div {
+    margin-left: 3.5em;
+}
+#section6-title {
+    margin-top: 1.5em;
+    font-size: 35px;
+    font-family: 'sans-serif';
+    font-weight: bold;
+    color: #88070a;
+}
+.section6-card {
+    margin-top: 1em;
+    background-color:#f1e1c1;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    width: 450px;
+}
+.section6-icon-name {
+    font-size: 20px;
+    font-family: 'Sylfaen';
+    margin-top: 1%;
+    margin-bottom: 3%;
+}
+.section6-icon-para p {
+    margin-left: 1em;
+    margin-right: 2em;
+    margin-bottom: 3%;
+    font-size: 17px;
+    font-family: 'Segoe UI';
+    width: 380px;
+    color: #2f2f2f;
+}
+#section6-video {
+    margin-left: 1em;
+    margin-top: 6.8em;
+    height: 523px;
+}
+#section6-video video {
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+
+
+
+/* Footer-Section */
+
+footer {
+    background-color: #88070a;
+    margin-top: 6em;
+    color: #fff;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr 3fr;
+}
+.footer-div {
+    margin-top: 1em;
+    margin-left: 1em;
+}
+.footer-div2 {
+    margin-top: 1em;
+    margin-left: 7em;
+}
+.footer-div3 {
+    margin-top: 1em;
+    margin-left: 4em;
+}
+.footer-div4 {
+    margin-top: 1em;
+    margin-left: 4em;
+}
+.footer-title {
+    font-size: 26px;
+    color: #d5bf94;
+    font-family: 'Californian FB';
+    font-weight: bold;
+}
+.footer-div1-icon {
+    color: #d5bf94;
+}
+.footer-grid1 {
+    margin-top: 1em;
+    font-size: 20px;
+}
+.footer-sub-grid {
+    margin-top: 0.7em;
+}
+.footer-maingrid {
+    margin-top: 1em;
+    font-size: 20px;
+    margin-left: -0.5em;
+}
+.footer-sub-grid2 {
+    margin-top: 0.7em;
+    margin-left: -0.5em;
+}
+
+.footer-text {
+    font-size: 18px;
+    color: #fff;
+    margin-left: 0.5em;
+    font-family: 'STXihei';
+}
+.footer-grid4-icon {
+    font-size: 22px;
+}
+#footer-hr {
+  border: 1px solid #d5bf94;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin-top: 3em;
+  width: 380%;
+  margin-left: 1em;
+}
+#footer-copyright {
+  display: flex;
+  flex-direction: column;
+}
+#copyright {
+  width: 370%;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: -15px;
+  color: #616161;
+}
