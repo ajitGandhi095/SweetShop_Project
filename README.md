@@ -1,8 +1,6 @@
 # 🛒 Full Stack E-commerce Web Application
 
-=> This is a **Full Stack E-commerce Web Application** built using **Python**, **Django**, **MySQL**, **HTML**, **CSS**, **Bootstrap**, and **JavaScript**. 
-=> The platform enables users to browse products, manage their cart, place orders, and track delivery—all through a seamless and secure interface. 
-=> It also includes a custom-built admin panel for advanced user, product and order management.
+=> This is a **Full Stack E-commerce Web Application** built using **Python**, **Django**, **MySQL**, **HTML**, **CSS**, **Bootstrap**, and **JavaScript**. The platform enables users to browse products, manage their cart, place orders, and track delivery—all through a seamless and secure interface. It also includes a custom-built admin panel for advanced user, product and order management.
 
 ---
 ## 🔧 Tech Stack
