@@ -14,6 +14,10 @@ def product_view(request):
     my_dict= {'products':product_list}
     return render(request, "EApp/index.html", my_dict)
 
+def wedding_view(request):
+
+    return render(request, 'EApp/wedding_shop.html')
+
 def about_view(request):
     return render(request, 'EApp/about.html')
 

@@ -1,0 +1,443 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    overflow-x: hidden;
+}
+.wrapper {
+    overflow: visible;
+    /* overflow-x: hidden; */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 30px;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+#title {
+    font-size: 30px;
+}
+#navdiv {
+    margin-top: 1%;
+    margin-left: -2em;
+}
+#navdiv a{
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+    position: relative;
+}
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: rgb(255, 68, 0);  /* You can change the underline color */
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+.nav-links a:hover {
+    color: brown /* Hover text color */
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+#header-login {
+    margin-top: 0.4em;
+}
+#header-login a{
+    font-size: 27px;
+    color: black;
+}
+
+/* Main-Section */
+
+/* Section-1 */
+#section1 {
+    position: relative;
+}
+#section1-img img{
+    object-fit: cover;
+}
+#section1-title {
+    position: absolute;
+    top: 3.5em;
+    left: 5em;
+    font-size: 55px;
+    font-family: 'Baskerville Old Face';
+    font-weight: bold;
+    text-shadow: 1px 1px 3px black;
+    color: #fff;
+    letter-spacing: 1px;
+    width: 500px;
+}
+
+/* Section-2 */
+#section2 {
+    margin-top: 3em;
+    display: flex;
+}
+#section2-firstdiv {
+    margin-left: 3em;
+    text-align: center;
+    background-color:#eddfc4;
+    padding: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    height: 400px;
+}
+#section2-firstdiv-img img {
+    margin-top: 2em;
+    margin-bottom: 1.3em;
+}
+#section2-firstdiv h2 {
+    margin-bottom: 0.4em;
+    font-size: 45px;
+    font-family: 'Baskerville Old Face';
+    color: #88070a;
+}
+#section2-firstdiv p {
+    font-size: 18px;
+    font-family: 'Century Gothic';
+    width: 560px;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+#section2-img img {
+    margin-right: 3em;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* Section-3 */
+#section3 {
+    margin-top: 3em;
+}
+#section3 h2 {
+    margin-left: 1.4em;
+    font-size: 35px;
+    font-family: 'Baskerville Old Face';
+    color: #88070a;
+    letter-spacing: 1px;
+}
+#section3 p {
+    font-size: 16px;
+    font-family: 'Century Gothic';
+    margin-left: 3em;
+    margin-top: 0.7em;
+    margin-bottom: 1.5em;
+    width: 92%;
+}
+.section3-img {
+    position: relative;
+    width: 565px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.section3-img img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+#section3-firstline-img {
+    margin-left: 3em;
+    margin-right: 3em;
+    display: flex;
+    margin-bottom: 2em;
+}
+#section3-firstline-img img {
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 2.5em;
+}
+#section3-secondline-img img {
+    object-fit: cover;
+    border-radius: 10px;
+}
+#section3-secondline-img {
+    margin-left: 3em;
+    margin-right: 3em;
+    display: flex;
+}
+.section3-img-text {
+    position: absolute;
+    bottom: 1.5em;
+    left: 1em;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Baskerville Old Face';
+    letter-spacing: 1px;
+    color: #fff;
+    z-index: 3;
+
+    opacity: 1;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    pointer-events: none; /* Optional: avoids interfering with hover */
+}
+.section3-img:hover .section3-img-text {
+    opacity: 0;
+    transform: translateY(0);
+}
+.section3-img::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    z-index: 1;
+}
+
+.section3-overlay-content {
+    position: absolute;
+    bottom: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(138, 9, 9, 0.733);
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: bottom 0.5s ease;
+    z-index: 2;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+.section3-img:hover .section3-overlay-content {
+    bottom: 0;
+    cursor: pointer;
+}
+.section3-overlay-content h3 {
+    margin: 0;
+    margin-left: 0.3em;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Baskerville Old Face';
+    letter-spacing: 1px;
+    color: #fff;
+}
+.section3-overlay-content-para {
+    margin-top: 1em;
+    margin-left: 0.5em;
+    font-size: 16px;
+    font-family: 'Century Gothic';
+    width: 400px;
+}
+.section3-overlay-content h3 {
+    margin: 0;
+    margin-left: 0.3em;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Baskerville Old Face';
+    letter-spacing: 1px;
+    color: #fff;
+}
+.section3-overlay-content-para {
+    margin-top: 1em;
+    margin-left: 0.5em;
+    font-size: 16px;
+    font-family: 'Century Gothic';
+    width: 400px;
+}
+
+/* Section-4 */
+#section4 {
+    display: flex;
+    margin-top: 4em;
+    gap: 0.6em;
+}
+.section4-multi-img {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6em;
+}
+#section4-multi-img-div1 {
+    background-color: #88070a;
+    color: white;
+    height: 150px;
+    width: 220px;
+    padding: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    /* height: 150px; */
+}
+#section4-multi-img-text {
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Baskerville Old Face';
+    letter-spacing: 1px;
+    margin-top: 0.2em;
+    padding: 0.4em;
+    text-align: center;
+}
+#section4-multi-img-text2 {
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Baskerville Old Face';
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 0.1em;
+}
+.section4-multi-img-image {
+    position: relative;
+    width: 220px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.section4-multi-img-image img {
+    object-fit: cover;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+.section4-img {
+    width: 350px;
+    height: 410px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.section4-image img {
+    object-fit: cover;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+#section4-multi-img2 {
+    width: 220px;
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+#section4-multi-img2 img{
+    object-fit: cover;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+.section4-image .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none; /* So it doesn't block hover events */
+}
+.section4-image:hover img {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+.section4-image:hover .overlay {
+    opacity: 1;
+}
+
+
+/* Footer-Section */
+
+footer {
+    background-color: #88070a;
+    margin-top: 2em;
+    color: #fff;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr 3fr;
+}
+.footer-div {
+    margin-top: 1em;
+    margin-left: 1em;
+}
+.footer-div2 {
+    margin-top: 1em;
+    margin-left: 7em;
+}
+.footer-div3 {
+    margin-top: 1em;
+    margin-left: 4em;
+}
+.footer-div4 {
+    margin-top: 1em;
+    margin-left: 4em;
+}
+.footer-title {
+    font-size: 26px;
+    color: #d5bf94;
+    font-family: 'Californian FB';
+    font-weight: bold;
+}
+.footer-div1-icon {
+    color: #d5bf94;
+}
+.footer-grid1 {
+    margin-top: 1em;
+    font-size: 20px;
+}
+.footer-sub-grid {
+    margin-top: 0.7em;
+}
+.footer-maingrid {
+    margin-top: 1em;
+    font-size: 20px;
+    margin-left: -0.5em;
+}
+.footer-sub-grid2 {
+    margin-top: 0.7em;
+    margin-left: -0.5em;
+}
+
+.footer-text {
+    font-size: 18px;
+    color: #fff;
+    margin-left: 0.5em;
+    font-family: 'STXihei';
+}
+.footer-grid4-icon {
+    font-size: 22px;
+}
+#footer-hr {
+  border: 1px solid #d5bf94;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin-top: 3em;
+  width: 380%;
+  margin-left: 1em;
+}
+#footer-copyright {
+  display: flex;
+  flex-direction: column;
+}
+#copyright {
+  width: 370%;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: -15px;
+  color: #616161;
+}

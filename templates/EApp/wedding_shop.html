@@ -1,0 +1,214 @@
+<!DOCTYPE html> 
+{% load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaxmiSweet | Wedding</title>
+    <link rel="stylesheet" href="{% static 'css/wedding_shop.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+<body>
+    
+    <div class="wrapper">
+
+        <!-- Header -->
+        <header class="navbar">
+            <div id="title">LaxmiSweetsStop.</div>
+            <div id="navdiv">
+                <nav class="nav-links">
+                    <span><a href="/">Home</a></span>
+                    <span style="margin-left: 1em; margin-right: 1em;"><a href="/shop">Shop</a></span>
+                    <span style="margin-right: 1em;"><a href="/about">About</a></span>
+                    <span><a href="/contact">Contact</a></span>
+                </nav>
+            </div>
+            <div id="header-login">
+                <a href="/login" class="bi bi-person" style="margin-right: 1em;"></a>
+                <a href="/cart" class="bi bi-cart" style="margin-right: 1em;"></a>
+            </div>
+        </header>
+
+        <!-- Main-Section -->
+
+        <!-- Section-1 -->
+        <section id="section1">
+
+            <div id="section1-img">
+                <img src="{% static 'images/wedding-img.jpg' %}" alt="" width="100%" height="550px">
+            </div>
+            <div id="section1-title">New Chapter Of Sweetness</div>
+
+        </section>
+
+        <!-- Section-2 -->
+        <section id="section2">
+
+            <div id="section2-firstdiv">
+                <div id="section2-firstdiv-img">
+                    <img src="{% static 'images/wedding-ring.jpg' %}" alt="" width="60px" height="60px">
+                </div>
+                <div>
+                    <h2>Bespoke Weddings</h2>
+                </div>
+                <div>
+                    <p>Love knows no barriers. It jumps hurdles and leaps fences to arrive at its destination – full of hope. That hope for a future filled with unconditional love is what inspires us to craft a truly unique range of delicacies exclusively for your special day. From live counters to a variety of exquisite mithai, we have a range of wedding services for you to explore. It’s the wedding you dreamt of, but a lot sweeter.</p>
+                </div>
+            </div>
+            <div id="section2-img">
+                <img src="{% static 'images/wedding-sweet1.jpg' %}" alt="" width="520px" height="400px">
+            </div>
+
+        </section>
+
+        <!-- Section-3 -->
+        <section id="section3">
+
+            <h2>Wedding Chapters</h2>
+            <div>
+                <p>We understand relationships and to make it easy for you we have divided our offering into different chapters of the wedding and what we can offer</p>
+            </div>
+            <div id="section3-firstline-img">
+                <div class="section3-img">
+                    <img src="{% static 'images/wedding-engagement.jpg' %}" alt="" width="555px" height="300px">
+                    <div class="section3-overlay-content">
+                        <h3>Engagement</h3>
+                        <div class="section3-overlay-content-para">The tradition of sweets and dryfruits to commence this beautiful chapter!</div>
+                    </div>
+                    <div class="section3-img-text">Engagement</div>
+                </div>
+                
+                <div class="section3-img" style="margin-left: 2.5em;">
+                    <img src="{% static 'images/wedding-catering.jpg' %}" alt="" width="555px" height="300px" class="section3-leftimg">
+                    <div class="section3-overlay-content">
+                        <h3>Festive Gifts</h3>
+                        <div class="section3-overlay-content-para">Make every festival a celebration with your new family!</div>
+                    </div>
+                    <div class="section3-img-text">Festival Gifts</div>
+                </div>
+            </div>
+            <div id="section3-secondline-img">
+                <div class="section3-img">
+                    <img src="{% static 'images/wedding-invitation.jpg' %}" alt="" width="565px" height="300px">
+                    <div class="section3-overlay-content">
+                        <h3>Invitation</h3>
+                        <div class="section3-overlay-content-para">Personalized for your Big Day!</div>
+                    </div>
+                    <div class="section3-img-text">Invitation</div>
+                </div>
+                <div class="section3-img" style="margin-left: 2.5em;">
+                    <img src="{% static 'images/wedding-catering.jpg' %}" alt="" width="565px" height="300px" class="section3-leftimg">
+                    <div class="section3-overlay-content">
+                        <h3>Catering</h3>
+                        <div class="section3-overlay-content-para">Make your wedding the talk of the town with our Grand Mithai Mela!</div>
+                    </div>
+                    <div class="section3-img-text">Catering</div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Section-4 -->
+        <section id="section4">
+
+            <div class="section4-multi-img" style="margin-left: 2.5em;">
+                <div id="section4-multi-img-div1">
+                    <div id="section4-multi-img-text">Wedding</div>
+                    <div id="section4-multi-img-text2">Diaries</div>
+                </div>
+                <div class="section4-multi-img-image section4-image">
+                    <img src="{% static 'images/wedding1.jpg' %}" alt="">
+                    <div class="overlay"></div>
+                </div>
+            </div>
+            <div class="section4-img section4-image">
+                <img src="{% static 'images/wedding2.jpg' %}" alt="" width="350px" height="410px">
+                <div class="overlay"></div>
+            </div>
+            <div class="section4-multi-img">
+                <div id="section4-multi-img2" class="section4-image">
+                    <img src="{% static 'images/wedding3.jpg' %}" alt="" width="220px" height="150px">
+                </div>
+                <div class="section4-multi-img-image section4-image">
+                    <img src="{% static 'images/wedding4.jpg' %}" alt="">
+                    <div class="overlay"></div>
+                </div>
+            </div>
+            <div class="section4-img section4-image">
+                <img src="{% static 'images/wedding5.jpg' %}" alt="" width="350px" height="410px">
+                <div class="overlay"></div>
+            </div>
+
+        </section>
+        
+        <!-- Footer-Section -->
+        <footer>
+            <div class="footer-div">
+                <div class="footer-title">Contact Information</div>
+                <div class="footer-grid1">
+                    <span class="bi bi-shop footer-div1-icon"> 
+                        <span class="footer-text" id="footer-grid1-text">Jaleswae, Baleswar, Odisha, <span style="margin-left: 2em;">756030</span></span>
+                    </span>
+                </div>
+                <div class="footer-sub-grid">
+                    <span class="bi bi-telephone footer-div1-icon">
+                        <span class="footer-text">+91 9959334007</span>
+                    </span>
+                </div>
+                <div class="footer-sub-grid">
+                    <span class="bi bi-envelope footer-div1-icon">
+                        <span class="footer-text">sales@mahalaxmisweets.com</span>
+                    </span>
+                </div>
+            </div>
+
+            <div class="footer-div2">
+                <div class="footer-title">Quick Links</div>
+                <div class="footer-maingrid">
+                    <span class="footer-text">Contact Us</span>
+                </div>
+                <div class="footer-sub-grid2">
+                    <span class="footer-text">Store Locator</span>
+                </div>
+            </div>
+            
+            <div class="footer-div3">
+                <div class="footer-title">Policies</div>
+                <div class="footer-maingrid">
+                    <span class="footer-text">Payment & Shipping</span>
+                </div>
+                <div class="footer-sub-grid2">
+                    <span class="footer-text">Return & Refund</span>
+                </div>
+                <div class="footer-sub-grid2">
+                    <span class="footer-text">Privacy Policy</span>
+                </div>
+                <div class="footer-sub-grid2">
+                    <span class="footer-text">Terms & Conditions</span>
+                </div>
+            </div>
+
+            <div class="footer-div4">
+                <div class="footer-title">Follow Us</div>
+                <div class="footer-maingrid" style="margin-left: 0.1em;">
+                    <span class="bi bi-instagram footer-grid4-icon"></span>
+                    <span class="bi bi-facebook" style="margin-left: 0.8em;"></span>
+                    <span class="bi bi-youtube" style="margin-left: 0.8em;"></span>
+                    <span class="bi bi-linkedin" style="margin-left: 0.8em;"></span>
+                    <div class="bi bi-twitter-x" style="margin-top: 1em;"></div>
+                </div>
+            </div>
+
+            <div id="footer-copyright">
+                <div id="footer-hr"></div>
+                <div id="copyright">
+                    <p style="color: white; margin-bottom: 0.5em; font-family: 'Arial';">Copyright © 2025 Travel Agency</p>
+                </div>
+            </div>
+        </footer>
+
+
+    </div>
+
+</body>
+</html>
