@@ -18,6 +18,12 @@ def wedding_view(request):
 
     return render(request, 'EApp/wedding_shop.html')
 
+def special_occasion_view(request):
+    product_list= ProductModel.objects.all()
+
+    my_dict= {'products':product_list}
+    return render(request, 'EApp/special_occasion.html', my_dict)
+
 def about_view(request):
     return render(request, 'EApp/about.html')
 
@@ -82,6 +88,16 @@ def home_view(request):
 
     my_dict= {'products':product_list}
     return render(request, 'EApp/home.html', my_dict)
+
+def home_wedding_view(request):
+
+    return render(request, 'EApp/home_wedding_shop.html')
+
+def home_special_occasion_view(request):
+    product_list= ProductModel.objects.all()
+
+    my_dict= {'products':product_list}
+    return render(request, 'EApp/home_special_occasion.html', my_dict)
 
 def home_about_view(request):
     return render(request, 'EApp/home_about.html')

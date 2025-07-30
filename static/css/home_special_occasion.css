@@ -105,19 +105,19 @@ html {
 }
 #section1-title {
     position: absolute;
-    top: 8em;
+    top: 5em;
     left: 3em;
-    font-size: 25px;
+    font-size: 40px;
     font-family: 'Calisto MT';
     font-weight: bold;
     color: #88070a;
     letter-spacing: 1px;
+    text-shadow: 1px 1px 1px black;
 }
 
 /* Section-2 */
 
 #section2 {
-    background-color: rgb(237, 223, 196);
     margin-top: 2em;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
@@ -219,7 +219,7 @@ html {
 
 footer {
     background-color: #88070a;
-    margin-top: 6em;
+    margin-top: 2em;
     color: #fff;
     padding: 20px;
     display: grid;

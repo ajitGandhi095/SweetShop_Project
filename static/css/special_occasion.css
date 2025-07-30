@@ -43,53 +43,23 @@ html {
     left: 50%;
     width: 0;
     height: 2px;
-    background-color:#88070a;  /* You can change the underline color */
+    background-color: rgb(255, 68, 0);  /* You can change the underline color */
     transition: all 0.3s ease;
     transform: translateX(-50%);
 }
-.nav-links:hover a {
-    color:#88070a /* Hover text color */
+.nav-links a:hover {
+    color: brown /* Hover text color */
 }
 
 .nav-links a:hover::after {
     width: 100%;
 }
-#account {
+#header-login {
     margin-top: 0.4em;
-    margin-right: 2em;
 }
-#account a{
+#header-login a{
     font-size: 27px;
     color: black;
-}
-.user_profile{
-    display: inline-block;
-    width: 35px;
-    height: 35px;
-    background-color: white;
-    color: black;
-    text-align: center;
-    text-decoration: none;
-    font-size: 22px;
-    position: relative;
-}
-#cart-count {
-    position: absolute;
-    right: 13.4em;
-    top: 1.8em;
-    font-size: 15px;
-    padding: 2px;
-    border-radius: 50%;
-    width: 19px;
-    height: 19px;
-    background-color: #88070a;
-    color: white;
-}
-#dashboardbtn {
-    text-decoration: none;
-    border: 1px solid black;
-    padding: 10px;
-    border-radius: 30px;
 }
 
 /* Section-1 */
@@ -105,19 +75,19 @@ html {
 }
 #section1-title {
     position: absolute;
-    top: 8em;
+    top: 5em;
     left: 3em;
-    font-size: 25px;
+    font-size: 40px;
     font-family: 'Calisto MT';
     font-weight: bold;
     color: #88070a;
     letter-spacing: 1px;
+    text-shadow: 1px 1px 1px black;
 }
 
 /* Section-2 */
 
 #section2 {
-    background-color: rgb(237, 223, 196);
     margin-top: 2em;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
@@ -219,7 +189,7 @@ html {
 
 footer {
     background-color: #88070a;
-    margin-top: 6em;
+    margin-top: 2em;
     color: #fff;
     padding: 20px;
     display: grid;

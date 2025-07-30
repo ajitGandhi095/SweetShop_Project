@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop</title>
-    <link rel="stylesheet" href="{% static 'css/shop.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home_special_occasion.css' %}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 </head>
 <body>
@@ -17,15 +17,24 @@
             <div id="title">LaxmiSweetsStop.</div>
             <div id="navdiv">
                 <nav class="nav-links">
-                    <span><a href="/">Home</a></span>
-                    <span style="margin-left: 1em; margin-right: 1em;"><a href="/shop">Shop</a></span>
-                    <span style="margin-right: 1em;"><a href="/about">About</a></span>
-                    <span><a href="/contact">Contact</a></span>
+                    <span><a href="/homepage">Home</a></span>
+                    <span style="margin-left: 1em; margin-right: 1em;"><a href="/home-shop">Shop</a></span>
+                    <span style="margin-right: 1em;"><a href="/home-about">About</a></span>
+                    <span><a href="/home-contact">Contact</a></span>
                 </nav>
             </div>
-            <div id="header-login">
-                <a href="/login" class="bi bi-person" style="margin-right: 1em;"></a>
-                <a href="/cart" class="bi bi-cart" style="margin-right: 1em;"></a>
+            <div id="account">
+                <a href="/user-profile" class="bi bi-person user-profile" style="margin-right: 1em;"></a>
+                <a href="/cart" class="bi bi-cart user-profile" style="margin-right: 1.1em;
+                text-decoration: none;"></a>
+
+                <!-- Display Cart Count -->
+                {% if cart_count > 0 %}
+                    <span id="cart-count">
+                        <span style="margin-left: 4px;">{{ cart_count }}</span>
+                    </span>
+                {% endif %}
+                <a href="/admin-login" id="dashboardbtn" style="font-size: 20px;">Dashboard</a>
             </div>
         </header>
 
@@ -37,9 +46,9 @@
             <section id="section1">
 
                 <div id="section1-img">
-                    <img src="{% static 'images/home_image.jpg' %}" alt="" width="100%" height="400px">
+                    <img src="{% static 'images/occasion-img.jpg' %}" alt="" width="100%" height="450px">
                 </div>
-                <div id="section1-title">Sweets and Namkeen</div>
+                <div id="section1-title">Special Occasion</div>
 
             </section>
 
@@ -68,11 +77,11 @@
                             <div id="section2-product-price">&#8377; {{product.price }}</div>
 
                             <div class="buy-now-button">
-                                <a href="/login" id="buyBtn1"
+                                <a href="#" id="buyBtn1"
                                     {% if not product.in_stock %} class="disabled-button" onclick="return false;" {% endif %}>
                                     Buy Now
                                 </a>
-                                <a href="/login" id="buyBtn2"
+                                <a href="/add/{{ product.id }}" id="buyBtn2"
                                     {% if not product.in_stock %} class="disabled-button" onclick="return false;" {% endif %}>
                                     Add to Cart</a>
                             </div>

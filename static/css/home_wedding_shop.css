@@ -7,12 +7,8 @@ html {
     padding: 0;
     box-sizing: border-box;
 }
-body {
-    overflow-x: hidden;
-}
 .wrapper {
     overflow: visible;
-    /* overflow-x: hidden; */
 }
 
 /* Navbar */
@@ -47,23 +43,53 @@ body {
     left: 50%;
     width: 0;
     height: 2px;
-    background-color: rgb(255, 68, 0);  /* You can change the underline color */
+    background-color:#88070a;  /* You can change the underline color */
     transition: all 0.3s ease;
     transform: translateX(-50%);
 }
-.nav-links a:hover {
-    color: brown /* Hover text color */
+.nav-links:hover a {
+    color:#88070a /* Hover text color */
 }
 
 .nav-links a:hover::after {
     width: 100%;
 }
-#header-login {
+#account {
     margin-top: 0.4em;
+    margin-right: 2em;
 }
-#header-login a{
+#account a{
     font-size: 27px;
     color: black;
+}
+.user_profile{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-size: 22px;
+    position: relative;
+}
+#cart-count {
+    position: absolute;
+    right: 13.4em;
+    top: 1.8em;
+    font-size: 15px;
+    padding: 2px;
+    border-radius: 50%;
+    width: 19px;
+    height: 19px;
+    background-color: #88070a;
+    color: white;
+}
+#dashboardbtn {
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 30px;
 }
 
 /* Main-Section */
